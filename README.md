@@ -29,8 +29,9 @@ If you have already installed XCode during your R installation (which is require
 git --version
 git config
 ```
-Note also that, after upgrading macOS, you might need to re-do the above and/or re-agree to the Xcode license agreement. 
+Accept the offer! Click on “Install”.
 
+Note: after upgrading macOS, you might need to re-do the above and/or re-agree to the Xcode license agreement. 
 
 ## Configure Git
 In your terminal, write the following, one at a time:
