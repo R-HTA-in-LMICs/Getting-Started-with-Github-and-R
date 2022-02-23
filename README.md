@@ -14,16 +14,17 @@ Github is a hosting service for Git. A hosting service provides an online reposi
 Git is a [version control system](https://en.wikipedia.org/wiki/Version_control). Its original purpose was to help groups of developers work collaboratively on big software projects. Git manages the evolution of a set of files – called a repository – in a logical, highly structured way. As explained by the very helpful [Happy Git with R](https://happygitwithr.com/big-picture.html), a version control system (i.e., Git) can be thought of as analogous to the “Track Changes” features from Microsoft Word. More importantly, it also helps you maintain stable versions of your model or data analysis, since the R version and packages used are kept 'as is' when you initiate the project.
 
 # Install Git
-The easiest way to download Git is directly. You can find the latest stable version of Git on the website: https://git-scm.com/downloads
-
-You can also check if you have Git already installed by writing the following in your shell:
+You can check if you have Git already installed by writing the following in your shell:
 ```{git}
 which git
 git --version
 ```
 This shows where your git files may be located.
 
-### Note: Mac users
+## Windows
+Install Git for [Windows](https://gitforwindows.org/).
+
+## macOS
 If you have already installed XCode during your R installation (which is required) first check that you have Git (you probably do):
 ```{git}
 git --version
