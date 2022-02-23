@@ -59,10 +59,24 @@ RStudio then prompts you for a passphrase. It is optional, but also a best pract
 
 Click “Create” and RStudio will generate an SSH key pair, stored in the files ~/.ssh/id_rsa and ~/.ssh/id_rsa.pub.
 
+Now, stay at Tools > Global Options…> Git/SVN > Create RSA Key… and select the 'Public Keys' option on the menu (shown below) and copy the Public SSH key.
+![SSHKey](img/SSH_keys.png)
+
 Note: **do not use HTTPS** as Github no longer supports HTTPS authentication.
 
 # Connect Git and GitHub
 This section will ensure that your computer is able to 'talk' to Github, using Git. If it doesn't, you have likely made an error during installation and configuration.
+
+## Connecgt Public SSH Key to Github
+In your Github account, go to settings and in the "Access" section of the sidebar, click  SSH and GPG keys. Click **New SSH key** or **Add SSH key**
+![addSSHKey](img/ssh-add-ssh-key.png)
+
+In the "Title" field, add a descriptive label for the new key. For example, if you're using a personal Mac, you might call this key "Personal MacBook Air".
+
+Then paste your key into the "Key" field and click **Add SSH** key.
+![addKey](img/ssh-add-key.png)
+
+**Note:** if prompted, confirm your GitHub password.
 
 ## Make a repo on GitHub
 Go to https://github.com and make sure you are logged in.
