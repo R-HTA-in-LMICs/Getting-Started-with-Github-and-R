@@ -50,16 +50,16 @@ To check, open RStudio and go to Tools > Global Options…> Git/SVN. If you see 
 ```{git}
 ls -al ~/.ssh/
 ```
-If you are told ~/.ssh/ doesn’t exist, you don’t have SSH keys!
+If you are told `~/.ssh/` doesn’t exist, you don’t have SSH keys!
 
 ### Create an SSH key pair
-Go to Tools > Global Options…> Git/SVN > Create RSA Key…
+In Rstudio, go to: `Tools > Global Options…> Git/SVN > Create RSA Key`
 
-RStudio then prompts you for a passphrase. It is optional, but also a best practice. Configuring your system for smooth operation with a passphrase-protected key introduces more moving parts. If you’re completely new at all this, skip the passphrase (or use HTTPS!) and implement it next time, when you are more comfortable with system configuration. I did not use a passphrase at first, but I do now, and record it in a password manager.
+RStudio then prompts you for a pass-phrase. It is optional, but also a best practice. Configuring your system for smooth operation with a pass-phrase-protected key introduces more moving parts. If you’re completely new at all this, skip the pass-phrase and implement it next time, when you are more comfortable with system configuration. I did not use a pass-phrase at first, but I do now, and record it in a password manager.
 
-Click “Create” and RStudio will generate an SSH key pair, stored in the files ~/.ssh/id_rsa and ~/.ssh/id_rsa.pub.
+Click `Create` and RStudio will generate an SSH key pair, stored in the files `~/.ssh/id_rsa and ~/.ssh/id_rsa.pub`.
 
-Now, stay at Tools > Global Options…> Git/SVN > Create RSA Key… and select the 'Public Keys' option on the menu (shown below) and copy the Public SSH key.
+Now, stay at `Tools > Global Options > Git/SVN > Create RSA Key` and select the 'Public Keys' option on the menu (shown below) and copy the Public SSH key.
 ![SSHKey](img/SSH_keys.png)
 
 Note: **do not use HTTPS** as Github no longer supports HTTPS authentication.
@@ -85,7 +85,7 @@ Near “Repositories”, click the big green “New” button. Or, if you are on
 
 How to fill this in:
 - Repository template: No template.
-- Repository name: myrepo or whatever you wish (we’ll delete this soon).
+- Repository name: 'myrepo' or whatever you wish (we’ll delete this soon).
 - Description: “Repository for testing my Git/GitHub setup” or similar. It’s nice to have something here, so you’ll see it appear in the README.
 - Choose 'Public'.
 - Initialize this repository with: Add a README file.
