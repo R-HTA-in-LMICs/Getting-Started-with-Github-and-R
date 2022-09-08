@@ -1,36 +1,20 @@
----
-editor_options: 
-  markdown: 
-    wrap: sentence
----
-
 # Getting-Started-with-Github-and-R
 
-A brief tutorial on using Github with R and Rstudio.
-Note: the tutorial closely follows [Happy Git with R](https://happygitwithr.com/index.html).
-The instructions below assume the following:
+A brief tutorial on using Github with R and Rstudio. Note: the tutorial closely follows [Happy Git with R](https://happygitwithr.com/index.html). The instructions below assume the following:
 
 1.  You have [R](https://cloud.r-project.org/) and [RStudio](https://www.rstudio.com/products/rstudio/) installed
 
 2.  You have created a [Github account](https://github.com/join)
 
-After ensuring the above, it is important to check whether you have Git installed.
-See below.
+After ensuring the above, it is important to check whether you have Git installed. See below.
 
 ## What is Github?
 
-Github is a hosting service for Git.
-A hosting service provides an online repository for your Git-based projects on the internet.
-It allows other people to see your stuff, sync up with you, and perhaps even make changes.
-It's a lot like Dropbox but much, much better.
+Github is a hosting service for Git. A hosting service provides an online repository for your Git-based projects on the internet. It allows other people to see your stuff, sync up with you, and perhaps even make changes. It's a lot like Dropbox but much, much better.
 
 ## What is Git?
 
-Git is a [version control system](https://en.wikipedia.org/wiki/Version_control).
-Its original purpose was to help groups of developers work collaboratively on big software projects.
-Git manages the evolution of a set of files -- called a repository -- in a logical, highly structured way.
-As explained by the very helpful [Happy Git with R](https://happygitwithr.com/big-picture.html), a version control system (i.e., Git) can be thought of as analogous to the "Track Changes" features from Microsoft Word.
-More importantly, it also helps you maintain stable versions of your model or data analysis, since the R version and packages used are kept 'as is' when you initiate the project.
+Git is a [version control system](https://en.wikipedia.org/wiki/Version_control). Its original purpose was to help groups of developers work collaboratively on big software projects. Git manages the evolution of a set of files -- called a repository -- in a logical, highly structured way. As explained by the very helpful [Happy Git with R](https://happygitwithr.com/big-picture.html), a version control system (i.e., Git) can be thought of as analogous to the "Track Changes" features from Microsoft Word. More importantly, it also helps you maintain stable versions of your model or data analysis, since the R version and packages used are kept 'as is' when you initiate the project.
 
 # Install Git
 
@@ -56,8 +40,7 @@ git --version
 git config
 ```
 
-Accept the offer!
-Click on "Install".
+Accept the offer! Click on "Install".
 
 Note: after upgrading macOS, you might need to re-do the above and/or re-agree to the Xcode license agreement.
 
@@ -75,12 +58,9 @@ git config --global --list
 
 ## Create Security Protocol
 
-Here we have to set up [SSH keys](https://en.wikipedia.org/wiki/Ssh-keygen).
-We advise the following instructions for beginners.
-If you are more advanced and want to follow the recommended Github security protocols, follow these instructions: <https://happygitwithr.com/ssh-keys.html#option-2-set-up-from-the-shell>
+Here we have to set up [SSH keys](https://en.wikipedia.org/wiki/Ssh-keygen). We advise the following instructions for beginners. If you are more advanced and want to follow the recommended Github security protocols, follow these instructions: <https://happygitwithr.com/ssh-keys.html#option-2-set-up-from-the-shell>
 
-To check, open RStudio and go to `Tools > Global Options > Git/SVN`.
-If you see something like `~/.ssh/id_rsa` in the SSH RSA Key box, you definitely have existing keys.If nothing shoes up, go to your terminal and type the following:
+To check, open RStudio and go to `Tools > Global Options > Git/SVN`. If you see something like `~/.ssh/id_rsa` in the SSH RSA Key box, you definitely have existing keys.If nothing shoes up, go to your terminal and type the following:
 
 ```{git}
 ls -al ~/.ssh/
@@ -92,11 +72,7 @@ If you are told `~/.ssh/` doesn't exist, you don't have SSH keys!
 
 In Rstudio, go to: `Tools > Global Options…> Git/SVN > Create RSA Key`
 
-RStudio then prompts you for a pass-phrase.
-It is optional, but also a best practice.
-Configuring your system for smooth operation with a pass-phrase-protected key introduces more moving parts.
-If you're completely new at all this, skip the pass-phrase and implement it next time, when you are more comfortable with system configuration.
-I did not use a pass-phrase at first, but I do now, and record it in a password manager.
+RStudio then prompts you for a pass-phrase. It is optional, but also a best practice. Configuring your system for smooth operation with a pass-phrase-protected key introduces more moving parts. If you're completely new at all this, skip the pass-phrase and implement it next time, when you are more comfortable with system configuration. I did not use a pass-phrase at first, but I do now, and record it in a password manager.
 
 Click `Create` and RStudio will generate an SSH key pair, stored in the files `~/.ssh/id_rsa and ~/.ssh/id_rsa.pub`.
 
@@ -108,8 +84,7 @@ Note: **do not use HTTPS** as Github no longer supports HTTPS authentication.
 
 # Connect Git and GitHub
 
-This section will ensure that your computer is able to 'talk' to Github, using Git.
-If it doesn't, you have likely made an error during installation and configuration.
+This section will ensure that your computer is able to 'talk' to Github, using Git. If it doesn't, you have likely made an error during installation and configuration.
 
 ## Connect Public SSH Key to Github
 
@@ -119,8 +94,7 @@ Click **New SSH key** or **Add SSH key**
 
 ![Github SSH Key Section](img/ssh-add-ssh-key.png)
 
-In the `Title` field, add a descriptive label for the new key.
-For example, if you're using a personal Mac, you might call this key `Personal MacBook Key`.
+In the `Title` field, add a descriptive label for the new key. For example, if you're using a personal Mac, you might call this key `Personal MacBook Key`.
 
 Then paste your key into the `Key` field and click **Add SSH** key.
 
@@ -130,9 +104,7 @@ Then paste your key into the `Key` field and click **Add SSH** key.
 
 ## Make a repo on GitHub
 
-Go to <https://github.com> and make sure you are logged in.
-Near `Repositories`, click the big green `New` button.
-Or, if you are on your own Github profile page, click on `Repositories`, then click the big green `New` button.
+Go to <https://github.com> and make sure you are logged in. Near `Repositories`, click the big green `New` button. Or, if you are on your own Github profile page, click on `Repositories`, then click the big green `New` button.
 
 *What options to select and how to fill this in:*
 
@@ -140,10 +112,7 @@ Or, if you are on your own Github profile page, click on `Repositories`, then cl
 
 -   Repository name: 'myrepo' or whatever you wish (we'll delete this soon).
 
--   Description: `Repository for testing my Git/GitHub setup` or similar.
-    It's nice to have something here, so you'll see it appear in the README.
-    We use this space to provide a general overview of the repository and the associated project(s).
-    You can go into great detail, for example see [this](https://github.com/18F/open-source-guide/blob/18f-pages/pages/making-readmes-readable.md).
+-   Description: `Repository for testing my Git/GitHub setup` or similar. It's nice to have something here, so you'll see it appear in the README. We use this space to provide a general overview of the repository and the associated project(s). You can go into great detail, for example see [this](https://github.com/18F/open-source-guide/blob/18f-pages/pages/making-readmes-readable.md).
 
 -   Choose `Public` if you want the repository to be open-source and accessible to anyone, or `Private` if you want to control who sees the repository.
 
@@ -163,8 +132,7 @@ In RStudio, start a new Project:
 
 -   `File > New Project > Version Control > Git`
 
--   In `Repository URL`, paste the URL of your new GitHub repository you have just created.
-    **Remember to copy the correct SSH URL**!
+-   In `Repository URL`, paste the URL of your new GitHub repository you have just created. **Remember to copy the correct SSH URL**!
 
 -   It will be something like this:
 
@@ -172,11 +140,9 @@ In RStudio, start a new Project:
 https://github.com/janedoe/myrepo.git.
 ```
 
--   Don't see an option to get the Project from Version Control?
-    Restart RStudio and try again.
+-   Don't see an option to get the Project from Version Control? Restart RStudio and try again.
 
--   Still no luck?
-    See [chapter 13](https://happygitwithr.com/rstudio-see-git.html) of Happy Git with R for trouble shooting Git and RStudio
+-   Still no luck? See [chapter 13](https://happygitwithr.com/rstudio-see-git.html) of Happy Git with R for trouble shooting Git and RStudio
 
 -   Accept the default project directory name, e.g. `myrepo`, which coincides with the GitHub repo name.
 
@@ -186,14 +152,11 @@ https://github.com/janedoe/myrepo.git.
 
 -   Click `Create Project`
 
-Now, if everything has been done correclty, you should find yourself in a new local RStudio Project that represents your test repo on GitHub.
-This should download the README.md file from GitHub.
-Look in RStudio's file browser pane for the README.md file.
+Now, if everything has been done correclty, you should find yourself in a new local RStudio Project that represents your test repo on GitHub. This should download the README.md file from GitHub. Look in RStudio's file browser pane for the README.md file.
 
 ## Make local changes, save, commit
 
-From RStudio, modify the README.md file, e.g., by adding the line "This is a line from RStudio".
-Save your changes.
+From RStudio, modify the README.md file, e.g., by adding the line "This is a line from RStudio". Save your changes.
 
 But how can we update these changes on Github?
 
@@ -207,9 +170,7 @@ But how can we update these changes on Github?
 
 -   Finally, click `Commit`.
 
-**See the image below to help you find these buttons!**
-![Git button](img/git_button.png)
-
+**See the image below to help you find these buttons!** ![Git button](img/git_button.png)
 
 ## Push your local changes online to GitHub
 
