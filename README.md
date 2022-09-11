@@ -102,6 +102,25 @@ Then paste your key into the `Key` field and click **Add SSH** key.
 
 **Note:** if prompted, confirm your GitHub password.
 
+## Authenticate your SSH key
+After you have provided Github an encrypted key to communicate with your computer, it is important to make sure that you 'authenticate' your SSH key. You can do this as follows. In the terminal type the following:
+
+`ssh -T git@github.com`
+
+you may see a warning like this
+
+```{git}
+> The authenticity of host 'github.com (IP ADDRESS)' can't be established.
+> RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+> Are you sure you want to continue connecting (yes/no)?
+```
+Verify that the fingerprint in the message you see matches GitHub's public key fingerprint. If it does, then type `yes`:
+
+```{git}
+> Hi *username*! You've successfully authenticated, but GitHub does not
+> provide shell access.
+```
+
 ## Make a repo on GitHub
 
 Go to <https://github.com> and make sure you are logged in. Near `Repositories`, click the big green `New` button. Or, if you are on your own Github profile page, click on `Repositories`, then click the big green `New` button.
