@@ -121,6 +121,8 @@ Verify that the fingerprint in the message you see matches GitHub's public key f
 > provide shell access.
 ```
 
+Verify that the resulting message contains your username. If you receive a "permission denied" message, see ["Error: Permission denied (publickey)"](https://docs.github.com/en/enterprise-cloud@latest/articles/error-permission-denied-publickey).
+
 ## Make a repo on GitHub
 
 Go to <https://github.com> and make sure you are logged in. Near `Repositories`, click the big green `New` button. Or, if you are on your own Github profile page, click on `Repositories`, then click the big green `New` button.
